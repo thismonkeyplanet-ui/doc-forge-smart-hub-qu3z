@@ -1,0 +1,29 @@
+{
+  "agent_name": "Router Agent",
+  "agent_id": "69ec5d9d760c686665879a78",
+  "description": "Searches documentation library to identify target document and section for each parsed chunk",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "has_knowledge_base": true,
+  "rag_id": "69ec5d3fc73c0e5666b5222a",
+  "response_schema": {
+    "routing_decisions": [
+      {
+        "section_title": "string",
+        "target_document": "string",
+        "target_section": "string",
+        "action": "string",
+        "confidence": "number",
+        "reasoning": "string"
+      }
+    ],
+    "unmatched_sections": [
+      {
+        "section_title": "string",
+        "suggested_document": "string",
+        "suggested_location": "string"
+      }
+    ]
+  }
+}

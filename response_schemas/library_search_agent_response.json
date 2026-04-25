@@ -1,0 +1,24 @@
+{
+  "agent_name": "Library Search Agent",
+  "agent_id": "69ec5d9ec7fa6fc6ca0787e3",
+  "description": "Handles conversational queries across the documentation library, returns summaries with exact locations and suggests synonyms",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "has_knowledge_base": true,
+  "rag_id": "69ec5d3fc73c0e5666b5222a",
+  "response_schema": {
+    "results": [
+      {
+        "document": "string",
+        "section": "string",
+        "relevance_score": "number",
+        "excerpt": "string",
+        "summary": "string"
+      }
+    ],
+    "total_results": "number",
+    "query_summary": "string",
+    "keyword_suggestions": ["string"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "agent_name": "Diff Generator Agent",
+  "agent_id": "69ec5d6fb5dce335b96a28b2",
+  "description": "Produces structured change preview with additions, modifications, and deletions per document section",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "changes": [
+      {
+        "document": "string",
+        "section": "string",
+        "change_type": "string",
+        "before": "string",
+        "after": "string",
+        "impact": "string",
+        "summary": "string"
+      }
+    ],
+    "total_changes": "number",
+    "overall_summary": "string"
+  }
+}

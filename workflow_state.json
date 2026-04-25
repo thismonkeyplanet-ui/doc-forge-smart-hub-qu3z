@@ -1,0 +1,96 @@
+{
+  "app_name": "DocFlow",
+  "description": "Intelligent Documentation Hub",
+  "agents": {
+    "manager": {
+      "agent_id": "69ec5dbe526b35c560a7eb30",
+      "name": "Documentation Pipeline Manager",
+      "type": "manager",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "managed_agents": [
+        "69ec5d6f5fd4baa2f5fd32fd",
+        "69ec5d9d760c686665879a78",
+        "69ec5d9eab1cfba2fa640564",
+        "69ec5d6f760c686665879a6b",
+        "69ec5d6fb5dce335b96a28b2"
+      ]
+    },
+    "ingestion_agent": {
+      "agent_id": "69ec5d6f5fd4baa2f5fd32fd",
+      "name": "Ingestion Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6"
+    },
+    "router_agent": {
+      "agent_id": "69ec5d9d760c686665879a78",
+      "name": "Router Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6",
+      "has_knowledge_base": true,
+      "rag_id": "69ec5d3fc73c0e5666b5222a",
+      "rag_name": "docflowdoclibrarypi51"
+    },
+    "formatter_agent": {
+      "agent_id": "69ec5d9eab1cfba2fa640564",
+      "name": "Formatter Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6",
+      "has_knowledge_base": true,
+      "rag_id": "69ec5d3fe01f11b1c838378b",
+      "rag_name": "docflowstyleguide1uj4"
+    },
+    "summarizer_agent": {
+      "agent_id": "69ec5d6f760c686665879a6b",
+      "name": "Summarizer Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6"
+    },
+    "diff_agent": {
+      "agent_id": "69ec5d6fb5dce335b96a28b2",
+      "name": "Diff Generator Agent",
+      "type": "sub-agent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6"
+    },
+    "search_agent": {
+      "agent_id": "69ec5d9ec7fa6fc6ca0787e3",
+      "name": "Library Search Agent",
+      "type": "independent",
+      "provider": "Anthropic",
+      "model": "claude-sonnet-4-6",
+      "has_knowledge_base": true,
+      "rag_id": "69ec5d3fc73c0e5666b5222a",
+      "rag_name": "docflowdoclibrarypi51"
+    },
+    "sync_agent": {
+      "agent_id": "69ec5d70a75829ff9acd7620",
+      "name": "Publishing Sync Agent",
+      "type": "independent",
+      "provider": "Perplexity",
+      "model": "sonar-pro"
+    }
+  },
+  "knowledge_bases": {
+    "doc_library": {
+      "rag_id": "69ec5d3fc73c0e5666b5222a",
+      "rag_name": "docflowdoclibrarypi51",
+      "description": "Documentation library knowledge base for storing and retrieving team documentation content, sections, and metadata",
+      "used_by": ["69ec5d9d760c686665879a78", "69ec5d9ec7fa6fc6ca0787e3"]
+    },
+    "style_guide": {
+      "rag_id": "69ec5d3fe01f11b1c838378b",
+      "rag_name": "docflowstyleguide1uj4",
+      "description": "Style guide knowledge base for storing formatting rules, templates, and writing conventions",
+      "used_by": ["69ec5d9eab1cfba2fa640564"]
+    }
+  },
+  "database": {
+    "db_name": "app_ac734a3799fed3b2e21b7f56",
+    "collections": ["users", "workspaces", "documents", "change_logs", "conversations", "published_links", "rejected_queue"]
+  }
+}

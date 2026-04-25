@@ -1,0 +1,23 @@
+{
+  "agent_name": "Ingestion Agent",
+  "agent_id": "69ec5d6f5fd4baa2f5fd32fd",
+  "description": "Parses raw pasted content into structured sections with metadata",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "parsed_sections": [
+      {
+        "title": "string",
+        "content": "string",
+        "metadata": {
+          "dates": ["string"],
+          "tags": ["string"],
+          "category": "string"
+        }
+      }
+    ],
+    "summary": "string",
+    "total_sections": "number"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "agent_name": "Documentation Pipeline Manager",
+  "agent_id": "69ec5dbe526b35c560a7eb30",
+  "description": "Orchestrates the ingestion-to-diff pipeline: coordinates parsing, routing, formatting, summarizing, and diff generation",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "pipeline_status": "string",
+    "changes": [
+      {
+        "document": "string",
+        "section": "string",
+        "change_type": "string",
+        "before": "string",
+        "after": "string",
+        "impact": "string",
+        "summary": "string"
+      }
+    ],
+    "total_changes": "number",
+    "overall_summary": "string",
+    "processing_notes": "string"
+  },
+  "example_response": {
+    "pipeline_status": "sample string",
+    "changes": [
+      {
+        "document": "sample string",
+        "section": "sample string",
+        "change_type": "sample string",
+        "before": "sample string",
+        "after": "sample string",
+        "impact": "sample string",
+        "summary": "sample string"
+      }
+    ],
+    "total_changes": 0,
+    "overall_summary": "sample string",
+    "processing_notes": "sample string"
+  }
+}

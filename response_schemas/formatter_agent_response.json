@@ -1,0 +1,22 @@
+{
+  "agent_name": "Formatter Agent",
+  "agent_id": "69ec5d9eab1cfba2fa640564",
+  "description": "Rewrites content to match workspace uniform style using style guide KB",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "has_knowledge_base": true,
+  "rag_id": "69ec5d3fe01f11b1c838378b",
+  "response_schema": {
+    "formatted_sections": [
+      {
+        "section_title": "string",
+        "original_content": "string",
+        "formatted_content": "string",
+        "changes_made": ["string"],
+        "style_compliance": "string"
+      }
+    ],
+    "style_warnings": ["string"]
+  }
+}

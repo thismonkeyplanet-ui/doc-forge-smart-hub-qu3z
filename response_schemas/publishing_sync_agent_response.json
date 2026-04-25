@@ -1,0 +1,23 @@
+{
+  "agent_name": "Publishing Sync Agent",
+  "agent_id": "69ec5d70a75829ff9acd7620",
+  "description": "Fetches external URLs via web search, compares against internal docs, flags drift with diff details",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "drift_report": [
+      {
+        "url": "string",
+        "internal_document": "string",
+        "drift_detected": "boolean",
+        "severity": "string",
+        "differences": ["string"],
+        "recommendation": "string"
+      }
+    ],
+    "total_urls_checked": "number",
+    "drift_count": "number",
+    "overall_status": "string"
+  }
+}

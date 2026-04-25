@@ -1,0 +1,21 @@
+{
+  "agent_name": "Summarizer Agent",
+  "agent_id": "69ec5d6f760c686665879a6b",
+  "description": "Condenses long entries into concise summaries while preserving key information",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "summarized_sections": [
+      {
+        "section_title": "string",
+        "original_length": "number",
+        "summary": "string",
+        "key_points": ["string"],
+        "importance": "string",
+        "was_condensed": "boolean"
+      }
+    ],
+    "total_reduction_percent": "number"
+  }
+}
